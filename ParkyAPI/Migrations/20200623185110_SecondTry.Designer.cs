@@ -11,9 +11,13 @@ namespace ParkyAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20200623185110_SecondTry")]
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     partial class SecondTry
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
+
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,5 +52,6 @@ namespace ParkyAPI.Migrations
                 });
 #pragma warning restore 612, 618
         }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 }

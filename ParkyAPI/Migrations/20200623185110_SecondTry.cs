@@ -4,7 +4,9 @@ namespace ParkyAPI.Migrations
 {
     public partial class SecondTry : Migration
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected override void Up(MigrationBuilder migrationBuilder)
+
         {
             migrationBuilder.DropPrimaryKey(
                 name: "PK_NationalParks",
@@ -19,6 +21,7 @@ namespace ParkyAPI.Migrations
                 table: "Tbl_NationalPark",
                 column: "Id");
         }
+
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
@@ -35,5 +38,6 @@ namespace ParkyAPI.Migrations
                 table: "NationalParks",
                 column: "Id");
         }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 }
