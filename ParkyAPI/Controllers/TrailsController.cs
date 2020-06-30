@@ -11,7 +11,7 @@ using ParkyAPI.Repository.IRepository;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Trails")]
     [ApiController]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public class TrailsController : Controller
@@ -73,7 +73,7 @@ namespace ParkyAPI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult CreateTrail([FromBody] TrailDto trailDto)
+        public IActionResult CreateTrail([FromBody] TrailCreateDto trailDto)
         {
             if (trailDto == null)
             {
@@ -106,7 +106,7 @@ namespace ParkyAPI.Controllers
         [ProducesResponseType(204)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateTrail(int id, [FromBody] TrailDto trailDto)
+        public IActionResult UpdateTrail(int id, [FromBody] TrailUpdateDto trailDto)
         {
             if (trailDto == null || id != trailDto.Id)
             {
